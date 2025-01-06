@@ -2,17 +2,17 @@
   "name": "ScriptTask",
   "shortName": "scripttask",
   "version": "0.0.19",
-  "author": "Ryan Blenis",
+  "author": "Simon Smith",
   "description": "Script (PowerShell, BAT, Bash) runner for endpoints",
   "hasAdminPanel": false,
-  "homepage": "https://github.com/ryanblenis/MeshCentral-ScriptTask",
-  "changelogUrl": "https://raw.githubusercontent.com/ryanblenis/MeshCentral-ScriptTask/master/changelog.md",
-  "configUrl": "https://raw.githubusercontent.com/ryanblenis/MeshCentral-ScriptTask/master/config.json",
-  "downloadUrl": "https://github.com/ryanblenis/MeshCentral-ScriptTask/archive/master.zip",
+  "homepage": "https://github.com/si458/MeshCentral-ScriptTask",
+  "changelogUrl": "https://raw.githubusercontent.com/si458/MeshCentral-ScriptTask/refs/heads/mytest/changelog.md",
+  "configUrl": "https://raw.githubusercontent.com/si458/MeshCentral-ScriptTask/refs/heads/mytest/config.json",
+  "downloadUrl": "https://github.com/si458/MeshCentral-ScriptTask/archive/refs/heads/mytest.zip",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanblenis/MeshCentral-ScriptTask.git"
+    "url": "https://github.com/si458/MeshCentral-ScriptTask.git"
   },
-  "versionHistoryUrl": "https://api.github.com/repos/ryanblenis/MeshCentral-ScriptTask/tags",
+  "versionHistoryUrl": "https://api.github.com/repos/si458/MeshCentral-ScriptTask/tags",
   "meshCentralCompat": ">=0.9.98"
 }
