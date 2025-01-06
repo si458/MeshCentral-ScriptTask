@@ -285,7 +285,11 @@ module.exports.CreateDB = function(meshserver) {
           obj.initFunctions();
     });  
     } else { // use NeDb
-        Datastore = require('@yetzt/nedb');
+        try { Datastore = require('@seald-io/nedb'); } catch (ex) { } // This is the NeDB with Node 23 support.
+        if (Datastore == null) {
+            try { Datastore = require('@yetzt/nedb'); } catch (ex) { } // This is the NeDB with fixed security dependencies.
+            if (Datastore == null) { Datastore = require('nedb'); } // So not to break any existing installations, if the old NeDB is present, use it.
+        }
         if (obj.scriptFilex == null) {
             obj.scriptFilex = new Datastore({ filename: meshserver.getConfigFilePath('plugin-scripttask.db'), autoload: true });
             obj.scriptFilex.persistence.setAutocompactionInterval(40000);
