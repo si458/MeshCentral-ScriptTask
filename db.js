@@ -285,7 +285,8 @@ module.exports.CreateDB = function(meshserver) {
           obj.initFunctions();
     });  
     } else { // use NeDb
-        try { Datastore = require('@seald-io/nedb'); } catch (ex) { } // This is the NeDB with Node 23 support.
+        try { Datastore = require('@seald-io/nedb'); } catch (ex) { console.error(ex); } // This is the NeDB with Node 23 support.
+        console.log(Datastore);
         if (Datastore == null) {
             try { Datastore = require('@yetzt/nedb'); } catch (ex) { } // This is the NeDB with fixed security dependencies.
             if (Datastore == null) { Datastore = require('nedb'); } // So not to break any existing installations, if the old NeDB is present, use it.
